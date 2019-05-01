@@ -27,6 +27,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+
 //Permisão para envio de arquivos 
 app.use(express.urlencoded({ extended: true}));
 app.use('/files', express.static(path.resolve(__dirname,'..','tmp')));
@@ -34,4 +35,4 @@ app.use('/files', express.static(path.resolve(__dirname,'..','tmp')));
 app.use(require('./routes'));
 
 //Porta de escuta portocolos tanto quanto HTTP quando Web Sockets
-server.listen(3333);
+server.listen(process.env.PORT || 3333);
