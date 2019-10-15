@@ -15,7 +15,7 @@ io.on('connection', socket => {
 });
 
 mongoose.connect(
-    'mongodb+srv://thiagotome10:bakuman10@cluster0-5mhlk.mongodb.net/omnistack?retryWrites=true',
+    'mongodb+srv://thiagotome10:<password>@cluster0-5mhlk.mongodb.net/omnistack?retryWrites=true',
     {
         useNewUrlParser: true
     }
